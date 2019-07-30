@@ -88,6 +88,7 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: 100%; /*ccalc(100% - 80px); hanged this from 50% to 100% for header issue */
+    text-align: center;
 }
 
 /* Display list items side by side */
@@ -217,10 +218,10 @@ nav h1 a {
 	height: auto;
 }
 .inside header {
-  /* position: fixed */
-  /* top: 0; */
+  position: fixed
+  top: 0;
   width: 100%;
-  /* z-index: 1000; */
+  z-index: 1000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -235,24 +236,35 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
-.inside #footer {
+/* .inside #footer {
   bottom: 0;
-  /* position: absolute; */
+  position: absolute;
   width: 100%;
 	text-align: center;
-}
+} */
 #restaurant-name {
-  color: #f18200;
+  color: #001a33;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 0px 15px 30px;
   text-transform: uppercase;
   line-height: 1.1;
+  text-align: center;
 }
 #restaurant-img {
-	width: 90%;
+  width: 100%;
+}
+#img-block{
+  width: 50%;
+}
+#info-block{
+  width: 50%;
+  text-align: center;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -268,23 +280,33 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
-#restaurant-container, #reviews-container {
+#restaurant-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 10px 40px 30px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 #reviews-container {
   padding: 30px 40px 80px;
+  justify-content: space-around;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #fff;
+  padding: 10px 40px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #001a33;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
+  text-align: center;
 }
 #reviews-list {
   margin: 0;
@@ -299,11 +321,17 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  width: 100%;
+  align-content: center;
 }
 #reviews-list li p {
   margin: 0 0 10px;
 }
 #restaurant-hours td {
   color: #666;
+}
+
+#restaurant-hours{
+  margin-left: auto;
+  margin-right: auto;
 }
