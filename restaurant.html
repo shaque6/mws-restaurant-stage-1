@@ -31,14 +31,16 @@
   <!-- Beginning main -->
   <main id="maincontent" role="main">
     <!-- Beginning map -->
-    <section id="map-container" role="application">
+    <section id="map-container" role="application" aria-label="Map">
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <p id="restaurant-cuisine"></p>
-      <h1 id="restaurant-name"></h1>
-    <section id="restaurant-container">
+    <p id="restaurant-cuisine" aria-labelledby="type_of_cuisine"></p>
+    <label for="type_of_cuisine">Type Of Cuisine</label>
+    <h1 id="restaurant-name" aria-labelledby="restaurantName"></h1>
+    <label for="restaurantName">Restaurant Name</label>
+    <section id="restaurant-container" role="region">
 
         <div id="img-block">
           <img id="restaurant-img">
@@ -50,7 +52,8 @@
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+    <section id="reviews-container" aria-labelledby="reviews">
+      <label for="reviews">Review List</label>
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
@@ -68,6 +71,7 @@
   <script type="text/javascript" src="js/dbhelper.js"></script>
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
+  <script src="js/sw_registration.js"></script>
   <!-- Google Maps -->
  <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
   <!-- End scripts -->

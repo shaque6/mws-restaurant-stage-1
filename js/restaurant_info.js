@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
  * Initialize leaflet map
  */
 initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => { 
+  fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
     } else {
@@ -89,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = "Picture of Restaurant Named " + restaurant.name;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
